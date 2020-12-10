@@ -46,8 +46,14 @@ const routes = [
   { path: '/suggest', name: 'suggest', component: resolve => require(['../views/studentuser/suggest.vue'], resolve) },
   // // 通知中心
   { path: '/notification', name: 'notification', component: resolve => require(['../views/studentuser/notification.vue'], resolve) },
-  // // 通知中心
+  // //  我的
   { path: '/studentUser', name: 'studentUser', component: resolve => require(['../views/student/studentUser.vue'], resolve) },
+  // 个人信息
+  { path: '/userDetails', name: 'userDetails', component: resolve => require(['../views/student/userDetails.vue'], resolve) },
+  // 课程通知
+  { path: '/courseNotice', name: 'courseNotice', component: resolve => require(['../views/studentuser/courseNotice.vue'], resolve) },
+   // 课程通知
+   { path: '/noticeHistory', name: 'noticeHistory', component: resolve => require(['../views/studentuser/noticeHistory.vue'], resolve) },
   //  上传
   {
     path: "/upload",

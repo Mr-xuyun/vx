@@ -1,16 +1,29 @@
 <template>
   <div>
-    <!--   -->
-   <div class="header">
+    <!-- 头部  -->
+    <div class="header" @click="$router.push('/userDetails')">
       <div class="top">
-          <img src="../../assets/tx.jpg"  class="portrait">
-          <div >
-                <div> 王虎</div>
-                <div>学生</div>
-          </div>
-      </div>   
-     
-   </div>
+        <img src="../../assets/tx.jpg" class="portrait" />
+        <div>
+          <div>王虎</div>
+          <div>学生</div>
+        </div>
+      </div>
+      <div>
+        <img src="../../assets/right.png" />
+      </div>
+    </div>
+   <!--   -->
+    <div>
+      <img src="../../assets/msdj.png" style="width: 100%; height: 300px" />
+    </div>
+    <div>
+      <mt-cell title="设置" is-link> </mt-cell>
+    </div>
+    <div>
+      <mt-cell title="反馈和意见" is-link> </mt-cell>
+    </div>
+    <!-- 底部选项卡 -->
     <div style="margin-top: 55px">
       <van-tabbar v-model="active" inactive-color="#999" active-color="#1B8FFF">
         <van-tabbar-item replace to="/students">
@@ -56,40 +69,43 @@ export default {
   },
 };
 </script>
-<style  lang="less" scoped>
-.top{
+<style lang="less" scoped>
+.top {
   display: flex;
   margin-left: 20px;
-  div{
-     margin-left: 6px;
-    div{
-      &:nth-child(1){
-            color: #fff;
-        }
-       &:nth-child(2){
-            color: #999;
-            opacity: 0.8;
-            font-size: 15px;
-        }
+  div {
+    margin-left: 6px;
+    div {
+      &:nth-child(1) {
+        color: #fff;
+      }
+      &:nth-child(2) {
+        color: #999;
+        opacity: 0.8;
+        font-size: 15px;
+      }
     }
-    
-    
   }
 }
-.header{
-    background-color: #1b8fff;
-    width: 100%;
-    height: 120px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    display: flex;
-    align-items: center;
-    
+.header {
+  background-color: #1b8fff;
+  width: 100%;
+  height: 120px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    &:nth-child(2) {
+      margin-right: 20px;
+    }
+  }
 }
 /* 头像 */
- .portrait{
-     width: 45px; height: 45px;
-     border-radius: 50%;
-      
- }
+.portrait {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
 </style>
