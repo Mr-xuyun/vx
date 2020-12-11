@@ -19,7 +19,7 @@ Vue.use(VueDirectiveImagePreviewer)
 Vue.component(Cell.name, Cell);
 Vue.prototype.axios=axios
 
-axios.defaults.baseURL="http://www.xasdqx.icu:8080/msdj/"
+axios.defaults.baseURL="api"
 // axios.defaults.baseURL="http://192.168.0.119:80/msdj/"
 
 

@@ -279,12 +279,12 @@ const router = new VueRouter({
   mode: 'history'
 })
 router.beforeEach((to, form, next) => {
-  // if (to.path != '/test') {
-    // let agent = navigator.userAgent.toLocaleLowerCase();
-    // if (agent.indexOf("micromessenger") === -1) {
-    //   next("/test");
-    //   return;
-    // }
+  if (to.path != '/test') {
+    let agent = navigator.userAgent.toLocaleLowerCase();
+    if (agent.indexOf("micromessenger") === -1) {
+      next("/test");
+      return;
+    }
     //如果进入到的路由是登录页或者注册页面，则正常展示
     if (to.path == '/login' || to.path == '/logon') {
       next();
@@ -294,8 +294,8 @@ router.beforeEach((to, form, next) => {
     } else {
       next();
     }
-  // } else {
-  //   next();
-  // }
+  } else {
+    next();
+  }
 })
 export default router

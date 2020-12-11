@@ -18,7 +18,7 @@ export default new Vuex.Store({
     pageNo :"1",
     pageSize:"5",
     // imgURL: "http://192.168.0.119:80/msdj/sys/common/static/",
-    imgURL:"http://www.xasdqx.icu:8080/msdj/sys/common/static/",
+    imgURL:"api/sys/common/static/",
     date :   moment(new Date()).format("YYYY-MM-DD")
   },
   mutations: {
